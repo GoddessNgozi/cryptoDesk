@@ -3,52 +3,49 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 
-const Coin = ({ id, name, symbol, price, img, rank }) => {
-
-  return (
-    <li className="listItem">
-      <div
-        className="homeItem"
-        id={id}
-      >
-        <div className="home-item-img">
-          <Link
-            to={`/details/${id}`}
-          >
-            <img src={img} alt={name} />
-          </Link>
-        </div>
-        <div className="home-item-info">
-          <p>
-            #
-            {rank}
-          </p>
-          <h3 className="name">{name}</h3>
-          <p className="symbol">{symbol}</p>
-          <p>
-            $
-            {price}
-          </p>
-        </div>
+const Coin = ({
+  id, name, symbol, price, img, rank,
+}) => (
+  <li className="listItem">
+    <div
+      className="homeItem"
+      id={id}
+    >
+      <div className="home-item-img">
         <Link
           to={`/details/${id}`}
         >
-          <FaArrowRight className="fontIcon" />
+          <img src={img} alt={name} />
         </Link>
       </div>
-    </li>
-  );
-};
+      <div className="home-item-info">
+        <p>
+          #
+          {rank}
+        </p>
+        <h3 className="name">{name}</h3>
+        <p className="symbol">{symbol}</p>
+        <p>
+          $
+          {price}
+        </p>
+      </div>
+      <Link
+        to={`/details/${id}`}
+      >
+        <FaArrowRight className="fontIcon" />
+      </Link>
+    </div>
+  </li>
+);
 
-HomeItem.propTypes = {
-  crypto: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    symbol: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    img: PropTypes.string.isRequired,
-    rank: PropTypes.number.isRequired,
-  }).isRequired,
+Coin.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  symbol: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  img: PropTypes.string.isRequired,
+  rank: PropTypes.number.isRequired,
 };
 
 export default Coin;

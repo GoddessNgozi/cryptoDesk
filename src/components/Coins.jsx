@@ -1,25 +1,27 @@
-import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import Coin from './Coins';
-import { fetchCoins } from '../../Redux/Crypto/CryptoSlice';
+import React, { useState } from 'react';
+import Coin from './Coin';
+import Search from './Search';
 
 const Coins = () => {
-  const cryptos = useSelector((state) => state.crypto);
+  const [search, setSearch] = useState('');
 
-  const filteredCrypto = cryptos.filter((crypto) => (
-    crypto.name.toLowerCase().includes(query.toLowerCase())
-  ));
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchCoins());
-  }, [dispatch, fetchCoins]);
+  const onSearch = (e) => {
+    setSearch(e.target.value);
+  };
 
   return (
     <>
+      <Search search={search} onSearch={onSearch} />
       <ul className="coins">
-        { filteredCrypto.map((crypto) => <Coin key={crypto.id} crypto={crypto} />)}
+        <Coin
+          key={coin.id}
+          img={coin.icon}
+          id={coin.id}
+          symbol={coin.symbol}
+          rank={coin.rank}
+          name={coin.name}
+          price={coin.price}
+        />
       </ul>
     </>
   );

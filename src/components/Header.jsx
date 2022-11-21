@@ -4,15 +4,14 @@ import { Link } from 'react-router-dom';
 import { FaLessThan, FaMicrophone } from 'react-icons/fa';
 import { FiSettings } from 'react-icons/fi';
 
-const Header = () => {
-  return (
-    <header>
+const Header = () => (
+  <header>
     <Navbar className="nav">
       <nav>
         <ul className="navLinks">
           <li>
             <Link to="/">
-              <FaLessThan className="lessthan"/>
+              <FaLessThan className="lessthan" />
               Home
             </Link>
           </li>
@@ -28,8 +27,7 @@ const Header = () => {
         </ul>
       </nav>
     </Navbar>
-    </header>
-  );
-};
+  </header>
+);
 
 export default Header;

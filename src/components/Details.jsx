@@ -5,14 +5,12 @@ const Details = ({
   id, name, symbol, price, rank,
 }) => (
   <ul>
-    <li className="listItem">
+    <li>
       <h1>hello</h1>
       <div
-        className="homeItem"
         id={id}
       >
-        <div className="home-item-img" />
-        <div className="home-item-info">
+        <div>
           <p>
             #
             {rank}

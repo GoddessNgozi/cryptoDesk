@@ -19,7 +19,7 @@ const Header = () => (
             <h1>Crypto Desk</h1>
           </li>
           <li className="headerList">
-            <div className="icons-class">
+            <div className="icons">
               <FaMicrophone />
               <FiSettings />
             </div>

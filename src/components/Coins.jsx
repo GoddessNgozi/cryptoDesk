@@ -25,7 +25,7 @@ const Coins = () => {
   return (
     <>
       <Search search={search} onSearch={onSearch} />
-      <ul className="coins">
+      <ul className="cards">
         { filteredCoins.map((coin) => (
           <Coin
             key={coin.id}

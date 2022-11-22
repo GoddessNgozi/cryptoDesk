@@ -11,13 +11,22 @@ const fetchCoins = createAsyncThunk(FETCH_COINS, async () => {
 const coinsSlice = createSlice({
   name: 'coins',
   initialState: [],
-  reducers: {},
+  reducers: {
+    coinDetails: (state, action) => {
+      const newState = state.map((coin) => {
+        if (coin.id === action.payload) return coin;
+        return { ...coin, display: true };
+      });
+      return newState;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchCoins.fulfilled, (state, action) => {
         let newState = state;
         newState = action.payload.coins.map((coin) => ({
           ...coin,
+          display: false,
         }));
         return newState;
       })
@@ -27,3 +36,4 @@ const coinsSlice = createSlice({
 
 export { fetchCoins };
 export default coinsSlice.reducer;
+export const { coinDetails } = coinsSlice.actions;

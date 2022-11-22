@@ -12,7 +12,7 @@ const Header = () => (
           <li>
             <Link to="/">
               <FaLessThan className="lessthan" />
-              Home
+              BACK
             </Link>
           </li>
           <li className="headerList">

@@ -2,42 +2,52 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
+import { useDispatch } from 'react-redux';
+import { coinDetails } from '../redux/coins/coins';
 
 const Coin = ({
   id, name, symbol, price, img, rank,
-}) => (
-  <li className="listItem">
-    <div
-      className="homeItem"
-      id={id}
-    >
-      <div className="home-item-img">
+}) => {
+  const dispatch = useDispatch();
+
+  const display = () => {
+    dispatch(coinDetails(symbol));
+  };
+
+  return (
+    <li className="listItem">
+      <div
+        className="homeItem"
+        id={id}
+      >
+        <div className="home-item-img">
+          <Link
+            to={`/details/${id}`}
+          >
+            <img src={img} alt={name} />
+          </Link>
+        </div>
+        <div className="home-item-info">
+          <p>
+            #
+            {rank}
+          </p>
+          <h3 className="name">{name}</h3>
+          <p className="symbol">{symbol}</p>
+          <p>
+            $
+            {price}
+          </p>
+        </div>
         <Link
-          to={`/details/${id}`}
+          to={`/details/${name}`}
         >
-          <img src={img} alt={name} />
+          <FaArrowRight className="fontIcon" onClick={display} />
         </Link>
       </div>
-      <div className="home-item-info">
-        <p>
-          #
-          {rank}
-        </p>
-        <h3 className="name">{name}</h3>
-        <p className="symbol">{symbol}</p>
-        <p>
-          $
-          {price}
-        </p>
-      </div>
-      <Link
-        to={`/details/${id}`}
-      >
-        <FaArrowRight className="fontIcon" />
-      </Link>
-    </div>
-  </li>
-);
+    </li>
+  );
+};
 
 Coin.propTypes = {
   id: PropTypes.string.isRequired,

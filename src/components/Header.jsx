@@ -16,7 +16,7 @@ const Header = () => (
             </Link>
           </li>
           <li className="headerList">
-            <h1>Crypto Metrics</h1>
+            <h1>Crypto Desk</h1>
           </li>
           <li className="headerList">
             <div className="icons-class">

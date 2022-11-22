@@ -5,15 +5,102 @@
   list-style: none;
 }
 
+body {
+  background-image: url('./assets/Crypto4-1.jpeg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+}
+
+.logo {
+  color: rgb(0, 208, 255);
+}
+
+.icons {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  width: 100px;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   text-align: center;
   width: 100%;
+  padding-left: 0;
 }
 
 .card {
   border-radius: 20px;
+}
+
+.navLinks {
+  align-items: center;
+  -webkit-animation: fadeBetween 35s infinite;
+  animation: fadeBetween 35s infinite;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  justify-content: space-between;
+  padding: 20px 10px;
+  width: 100%;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px 0;
+    border: 2px solid rgb(0,208,255);
+    padding: 0 0 0 5px;
+    border-radius: 1rem;
+    width: 30rem;
+    background-color: rgba(255, 255, 255, 0.635);
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.searchIcon {
+  font-size: 1.75rem;
+  padding: 5px;
+  /* background-color: rgba(255, 255, 255, 0.848);
+  border-radius: 2rem;*/
+}
+
+.searchInput {
+  height: 3rem;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -30px;
+}
+
+.symbol, .price {
+  margin-bottom: 0;
+}
+
+.floater {
+  margin-top: 65px;
+}
+
+.arrow {
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media only screen and (max-width: 600px) {

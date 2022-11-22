@@ -1,32 +1,29 @@
 import React from 'react';
-import { Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaLessThan, FaMicrophone } from 'react-icons/fa';
 import { FiSettings } from 'react-icons/fi';
 
 const Header = () => (
   <header>
-    <Navbar className="nav">
-      <nav>
-        <ul className="navLinks">
-          <li>
-            <Link to="/">
-              <FaLessThan className="lessthan" />
-              BACK
-            </Link>
-          </li>
-          <li className="headerList">
-            <h1>Crypto Desk</h1>
-          </li>
-          <li className="headerList">
-            <div className="icons">
-              <FaMicrophone />
-              <FiSettings />
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </Navbar>
+    <nav>
+      <ul className="navLinks">
+        <li>
+          <Link to="/">
+            <FaLessThan className="lessthan" />
+            BACK
+          </Link>
+        </li>
+        <li className="logo">
+          <h1>Crypto Desk</h1>
+        </li>
+        <li>
+          <div className="icons">
+            <FaMicrophone />
+            <FiSettings />
+          </div>
+        </li>
+      </ul>
+    </nav>
   </header>
 );
 

@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 import { coinDetails } from '../redux/coins/coins';
 
 const Coin = ({
-  id, name, symbol, price, img, rank,
+  id, name, symbol, price, img,
 }) => {
   const dispatch = useDispatch();
 
@@ -21,29 +21,41 @@ const Coin = ({
         className="text-white card"
         id={id}
         style={{
-          width: '100%', height: '159px', borderColor: 'white', backgroundColor: '#1d6cffc1',
+          width: '100%', height: '159px', borderColor: 'rgb(0, 208, 255)', backgroundColor: '#1865F9',
         }}
       >
         <Card.Img
           src={img}
           alt={name}
           style={{
-            backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', width: '55px', margin: '50px 0 50px',
+            backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', width: '55px', margin: 'auto',
           }}
         />
-        <Card.ImgOverlay className="info">
-          <Card.Title><h3>{name}</h3></Card.Title>
-          <Card.Text>
-            $
-            {price}
-          </Card.Text>
-          <Card.Text>{symbol}</Card.Text>
-          <Card.Text>{rank}</Card.Text>
+        <Card.ImgOverlay>
           <Link
+            className="arrow"
             to={`/details/${name}`}
           >
-            <FaArrowRight className="fontIcon" onClick={display} style={{ color: 'white' }} />
+            <FaArrowRight
+              className="fontIcon"
+              onClick={display}
+              style={{
+                color: 'white', border: '1.5px solid white', borderRadius: '50%', padding: '3px', fontSize: '25px',
+              }}
+            />
           </Link>
+          <div className="info">
+            <Card.Title className="name">
+              {name}
+            </Card.Title>
+            <div className="floater">
+              <p className="symbol">{symbol}</p>
+              <p className="price">
+                $
+                {price}
+              </p>
+            </div>
+          </div>
         </Card.ImgOverlay>
       </Card>
     </li>
@@ -56,7 +68,6 @@ Coin.propTypes = {
   symbol: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   img: PropTypes.string.isRequired,
-  rank: PropTypes.number.isRequired,
 };
 
 export default Coin;

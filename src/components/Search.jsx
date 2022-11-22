@@ -4,12 +4,16 @@ import PropTypes from 'prop-types';
 
 const Search = ({ search, onSearch }) => (
   <div className="searchContainer">
-    <input
-      type="text"
-      placeholder="Search Coins"
-      value={search}
-      onChange={onSearch}
-    />
+    <div className="search">
+      <input
+        className="searchInput"
+        type="text"
+        placeholder="Search Coins"
+        value={search}
+        onChange={onSearch}
+      />
+      <span className="searchIcon">🔍</span>
+    </div>
   </div>
 );
 

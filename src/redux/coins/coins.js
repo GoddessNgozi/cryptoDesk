@@ -14,7 +14,7 @@ const coinsSlice = createSlice({
   reducers: {
     coinDetails: (state, action) => {
       const newState = state.map((coin) => {
-        if (coin.id === action.payload) return coin;
+        if (coin.symbol !== action.payload) return coin;
         return { ...coin, display: true };
       });
       return newState;

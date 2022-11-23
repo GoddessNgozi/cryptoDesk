@@ -33,6 +33,7 @@ const Coins = () => {
             id={coin.id}
             symbol={coin.symbol}
             name={coin.name}
+            rank={coin.rank}
             price={coin.price}
           />
         ))}

@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 import { coinDetails } from '../redux/coins/coins';
 
 const Coin = ({
-  id, name, symbol, price, img,
+  id, name, symbol, price, img, rank,
 }) => {
   const dispatch = useDispatch();
 
@@ -32,18 +32,26 @@ const Coin = ({
           }}
         />
         <Card.ImgOverlay>
-          <Link
-            className="arrow"
-            to={`/details/${name}`}
-          >
-            <FaArrowRight
-              className="fontIcon"
-              onClick={display}
-              style={{
-                color: 'white', border: '1.5px solid white', borderRadius: '50%', padding: '3px', fontSize: '25px',
-              }}
-            />
-          </Link>
+          <div className="top">
+            <span className="rank">
+              RANK
+              #
+              {rank}
+            </span>
+            <span>
+              <Link
+                to={`/details/${name}`}
+              >
+                <FaArrowRight
+                  className="fontIcon"
+                  onClick={display}
+                  style={{
+                    color: 'rgb(0, 208, 255)', border: '1.5px solid rgb(0, 208, 255)', borderRadius: '50%', padding: '3px', fontSize: '25px',
+                  }}
+                />
+              </Link>
+            </span>
+          </div>
           <div className="info">
             <Card.Title className="name">
               {name}
@@ -68,6 +76,7 @@ Coin.propTypes = {
   symbol: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   img: PropTypes.string.isRequired,
+  rank: PropTypes.number.isRequired,
 };
 
 export default Coin;

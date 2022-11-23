@@ -46,7 +46,7 @@ const Coin = ({
                   className="fontIcon"
                   onClick={display}
                   style={{
-                    color: 'rgb(0, 208, 255)', border: '1.5px solid rgb(0, 208, 255)', borderRadius: '50%', padding: '3px', fontSize: '25px',
+                    color: 'white', border: '1.5px solid white', borderRadius: '50%', padding: '3px', fontSize: '25px',
                   }}
                 />
               </Link>

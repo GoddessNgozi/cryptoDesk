@@ -32,8 +32,8 @@ const Coins = () => {
             img={coin.icon}
             id={coin.id}
             symbol={coin.symbol}
-            rank={coin.rank}
             name={coin.name}
+            rank={coin.rank}
             price={coin.price}
           />
         ))}

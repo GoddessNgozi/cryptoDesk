@@ -10,13 +10,12 @@ const Header = () => (
         <li>
           <Link to="/">
             <FaLessThan className="lessthan" />
-            BACK
           </Link>
         </li>
         <li className="logo">
           <h1>
             crypto
-            <span className="desk">DESK</span>
+            <span className="desk">Desk</span>
           </h1>
         </li>
         <li>

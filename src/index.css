@@ -9,7 +9,7 @@
 }
 
 body {
-  background-image: url('./assets/Crypto4-1.jpeg'); 
+  background-image: url('./assets/Crypto4-1.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -24,7 +24,7 @@ body {
 }
 
 .desk {
-  color: rgb(0,208,255);
+  color: rgb(0, 208, 255);
 }
 
 .icons {
@@ -48,7 +48,7 @@ body {
 
 .navLinks {
   align-items: center;
-  -webkit-animation: fadeBetween 35s infinite;
+  -webkit-animation: fadebetween 35s infinite;
   animation: fadeBetween 35s infinite;
   display: flex;
   flex-direction: row;
@@ -63,11 +63,11 @@ body {
   justify-content: center;
   align-items: center;
   margin: 80px 0;
-    border: 2px solid rgb(0,208,255);
-    padding: 0 0 0 5px;
-    border-radius: 1rem;
-    width: 30rem;
-    background-color: rgba(255, 255, 255, 0.635);
+  border: 2px solid rgb(0, 208, 255);
+  padding: 0 0 0 5px;
+  border-radius: 1rem;
+  width: 30rem;
+  background-color: rgba(255, 255, 255, 0.635);
 }
 
 .searchContainer {
@@ -78,8 +78,9 @@ body {
 .searchIcon {
   font-size: 1.75rem;
   padding: 5px;
+
   /* background-color: rgba(255, 255, 255, 0.848);
-  border-radius: 2rem;*/
+  border-radius: 2rem; */
 }
 
 .searchInput {
@@ -98,14 +99,16 @@ body {
   align-items: center;
   margin-top: -30px;
 }
+
 .name {
   max-width: 125px;
   text-overflow: ellipsis;
-overflow: hidden;
-white-space: nowrap;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-.symbol, .price {
+.symbol,
+.price {
   margin-bottom: 0;
 }
 
@@ -116,13 +119,13 @@ white-space: nowrap;
 .rank {
   background-color: #2828ff;
   border-radius: 20px;
-  color: hsla(0,0%,100%,.764);
-  font-family: Lato,sans-serif;
+  color: hsla(0, 0%, 100%, 0.764);
+  font-family: Lato, sans-serif;
   font-size: 13px;
   padding: 2px;
   white-space: nowrap;
   text-align: center;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   width: 73px;
   cursor: pointer;
 }

@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom';
 import CoinDetails from './components/CoinDetails';
 import Header from './components/Header';
 import Home from './components/Home';
-// import './App.css';
 
 function App() {
   return (

@@ -14,7 +14,10 @@ const Header = () => (
           </Link>
         </li>
         <li className="logo">
-          <h1>Crypto Desk</h1>
+          <h1>
+            crypto
+            <span className="desk">DESK</span>
+          </h1>
         </li>
         <li>
           <div className="icons">

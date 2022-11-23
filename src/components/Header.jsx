@@ -10,7 +10,6 @@ const Header = () => (
         <li>
           <Link to="/">
             <FaLessThan className="lessthan" />
-            BACK
           </Link>
         </li>
         <li className="logo">

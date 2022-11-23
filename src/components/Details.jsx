@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FaTwitter, FaBattleNet } from 'react-icons/fa';
 import './Details.css';
 
 const Details = ({
   id, name, symbol, price, rank, icon,
   priceChange1h, priceChange1d, priceChange1w,
-  totalSupply, marketCap, volume, websiteUrl, exp, twitterUrl,
+  totalSupply, marketCap, volume, websiteUrl,
 }) => (
   <div id={id} className="myCoinContainer">
     <div className="coinTitle">
@@ -77,8 +78,8 @@ const Details = ({
         </div>
         <div className="coinSocial">
           <a href={websiteUrl}><img src={icon} alt="website logo" className="socialIcon" /></a>
-          <a href={exp[0]}><img src="" alt="blockchain logo" className="socialIcon" /></a>
-          <a href={twitterUrl}><img src="" alt="twitter logo" className="socialIcon" /></a>
+          <FaBattleNet className="socialIcon" />
+          <FaTwitter className="socialIcon" />
         </div>
       </section>
     </div>
@@ -99,8 +100,6 @@ Details.propTypes = {
   marketCap: PropTypes.number.isRequired,
   volume: PropTypes.number.isRequired,
   websiteUrl: PropTypes.string.isRequired,
-  exp: PropTypes.arrayOf.isRequired,
-  twitterUrl: PropTypes.string.isRequired,
 };
 
 export default Details;

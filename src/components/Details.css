@@ -244,10 +244,10 @@
 }
 
 .coinImg {
-  animation: MoveUpDown 3.5s linear infinite;
   position: absolute;
   left: 380px;
   top: 120px;
+  width: 55px;
 }
 
 @keyframes MoveUpDown {

@@ -23,8 +23,6 @@ const CoinDetails = () => {
           marketCap={coin.marketCap}
           volume={coin.volume}
           websiteUrl={coin.websiteUrl}
-          exp={coin.exp}
-          twitterUrl={coin.twitterUrl}
         />
       ))}
     </main>

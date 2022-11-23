@@ -8,17 +8,15 @@
 
 ### Screenshots
 
-![](./src/Assets/desktopHome.snip.PNG)
-![](./src/Assets/mobileHome.snip.PNG)
-![](./src/Assets/mobiledets.snip.PNG)
+![](./src/assets/all-devices-white.png)
 
 ### Live Demo
 
-[link to live demo on Netlify](https://ngozi-cryptodesk.netlify.app/)
+[link to live demo on Netlify](https://ngozi-cryptodesk.netlify.app)
 
 ### Loom Recording
 
-[Link to Loom Recording]()
+[Link to Loom Recording](https://loom.com/share/fe034a53dc02467ab1c79b1810151ba5)
 
 ## Built With
 

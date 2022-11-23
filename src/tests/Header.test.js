@@ -6,8 +6,8 @@ import { Provider } from 'react-redux';
 import store from '../redux/configureStore';
 import Header from '../components/Header';
 
-describe('Home renders correctly', () => {
-  test('Home rockets Correctly', () => {
+describe('Header renders correctly', () => {
+  test('Header rockets Correctly', () => {
     const header = render(
       <Provider store={store}>
         <Router>

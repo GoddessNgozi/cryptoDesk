@@ -6,8 +6,8 @@ import { Provider } from 'react-redux';
 import store from '../redux/configureStore';
 import CoinDetails from '../components/CoinDetails';
 
-describe('Home renders correctly', () => {
-  test('Home rockets Correctly', () => {
+describe('Details renders correctly', () => {
+  test('Details renders Correctly', () => {
     const coinDetails = render(
       <Provider store={store}>
         <Router>

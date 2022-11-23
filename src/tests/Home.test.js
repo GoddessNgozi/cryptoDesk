@@ -7,7 +7,7 @@ import store from '../redux/configureStore';
 import Home from '../components/Home';
 
 describe('Home renders correctly', () => {
-  test('Home rockets Correctly', () => {
+  test('Home renders Correctly', () => {
     const home = render(
       <Provider store={store}>
         <Router>

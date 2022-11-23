@@ -16,7 +16,7 @@ const Header = () => (
         <li className="logo">
           <h1>
             crypto
-            <span className="desk">DESK</span>
+            <span className="desk">Desk</span>
           </h1>
         </li>
         <li>
